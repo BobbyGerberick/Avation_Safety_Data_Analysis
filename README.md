@@ -16,7 +16,11 @@ A company is expanding in to new industries to diversify its portfolio. Specific
 The [dataset](https://www.kaggle.com/datasets/khsamaha/aviation-accident-database-synopses) used for this analysis was downloaded from Kaggle. It is from the National Transportation Safety Board and includes data from 1962 to 2023 about civil aviation accidents and selected incidents in the United States and international waters.
 
 ## Methods
-
+### Data Cleaning:
+- Converted `Event.Date` to `pd.to_datetime` format.
+- Removed null values from `Event.Id`, `Investigation.Type`, `Accident.Number`, and `Event.Date`.
+- Subset data by `Event.Date` to past 30 years because older planes are likely no longer in the air.
+- Created `Total.Injuries` column by summing `Total.Fatal.Injuries`, `Total.Minor.Injuries`, and `Total.Serious.Injuries`
 
 
 ## Results
