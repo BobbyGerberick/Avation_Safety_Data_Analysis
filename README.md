@@ -1,15 +1,18 @@
 
 # Aviation Safety Analysis
 ![](https://images.theconversation.com/files/472287/original/file-20220704-13-iyr4cr.jpeg?ixlib=rb-1.1.0&rect=38%2C0%2C4086%2C2040&q=45&auto=format&w=668&h=324&fit=crop)
+
 **Authors:** Bobby Gerberick, Claire Sarraille, and Ben Gilbert
 
 ## Overview
 
 This project analyzes aircraft data in order to construct recommendations for a business that needs insights on the safety of airplanes. Descriptive analysis of the safety of different aircrafts shows that (insert our 3 findings here). The business can use this analysis to set guidelines for their new endeavor into the aviation industry.
+- An [interactive dashboard](https://public.tableau.com/app/profile/bobby.gerberick/viz/EnterpriseRiskAnalysisExploringtheAircraftLeasingIndustry/FlatIronInvestingPitch?publish=yes) is available to explore our data and conclusions. 
 
 ## Business Problem
+Flatiron Investing is expanding into new industries to diversify its portfolio. Specifically, they are interested in purchasing and operating airplanes for commercial and private enterprises, but do not know anything about the potential risks of aircraft. Flatiron Investing needs help determining which aircrafts are the lowest risk to start their new business endeavor.
 ![](https://gray-wwsb-prod.cdn.arcpublishing.com/resizer/PLAR0OJXJ6Z0qxbtQcXkj_TsLBo=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/HDOIMOAREJELRLVVMTTMBOO664.jpg)
-A company is expanding in to new industries to diversify its portfolio. Specifically, they are interested in purchasing and operating airplanes for commercial and private enterprises, but do not know anything about the potential risks of aircraft. The company needs help determining which aircrafts are the lowest risk to start their new business endeavor.
+
 
 ## The Data
 
@@ -17,10 +20,7 @@ The [dataset](https://www.kaggle.com/datasets/khsamaha/aviation-accident-databas
 
 ## Methods
 ### Data Cleaning:
-- Converted `Event.Date` to `pd.to_datetime` format.
-- Removed null values from `Event.Id`, `Investigation.Type`, `Accident.Number`, and `Event.Date`.
-- Subset data by `Event.Date` to past 30 years because older planes are likely no longer in the air.
-- Created `Total.Injuries` column by summing `Total.Fatal.Injuries`, `Total.Minor.Injuries`, and `Total.Serious.Injuries`
+- We primarily investigated the columns `Purpose.of.flight`, `Make,` and `Model` in order to understand which flight purposes are the riskiest, and which makes and models are the safest within commercial purposes.
 
 
 ## Results
@@ -48,6 +48,4 @@ The [dataset](https://www.kaggle.com/datasets/khsamaha/aviation-accident-databas
 
 
 ## Conclusion
-We reccommend commercial operations over private. We advise considering instructional businesses they do not entail an especially high risk for heavy aircraft. Out of the largest manufacturers of heavy aircraft, we recommend Airbus, specifically the A350 and A220 models. 
-
-
+We reccommend commercial operations over private. We advise considering instructional businesses as they do not entail an especially high risk for heavy aircraft. Out of the largest manufacturers of heavy aircraft, we recommend Airbus, specifically the A350 and A220 models. 
